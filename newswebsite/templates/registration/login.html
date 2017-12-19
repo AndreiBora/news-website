@@ -1,0 +1,19 @@
+{% extends "newswebsite/base.html" %}
+
+{% block content1 %}
+<br>
+<br>
+<br>
+  <div id="login-box" class='container'>
+    <center>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      New on this website?
+      <a href="{% url 'register' %}">Sign up</a>
+    </center>
+  </div>
+
+{% endblock %}
